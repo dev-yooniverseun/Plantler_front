@@ -22,9 +22,7 @@ function Khboardlist() {
             .then(res=> {
                 console.log("res: {}", res);
                 if(res.data.state) {
-                    //setList(res.data.result);
                     const { ranks: rankData, list: listData } = res.data.result;
-                    // setRanks(rankData || []);
                     setRanks(res.data.result.ranks);
                     setList(listData || []);
                 } else {
